@@ -1,0 +1,35 @@
+{
+  "name": "ff-browser-mcp-bridge",
+  "version": "0.1.0",
+  "description": "MCP server that drives your real, logged-in Firefox through a WebExtension bridge",
+  "author": "ff-browser-mcp-bridge",
+  "license": "Apache-2.0",
+  "type": "module",
+  "bin": {
+    "ff-browser-mcp-bridge": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "extension"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --target node20 --clean && node -e \"require('fs').chmodSync('dist/index.js', 0o755)\"",
+    "watch": "tsup src/index.ts --format esm --target node20 --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "inspector": "pnpx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "commander": "^13.1.0",
+    "ws": "^8.18.1",
+    "zod": "^3.24.2",
+    "zod-to-json-schema": "^3.24.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/ws": "^8.18.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.6.2"
+  }
+}
