@@ -25,7 +25,7 @@ Connect one tab at a time by clicking the toolbar icon. The badge turns **ON** w
 
 **2. Install the Firefox extension**
 
-Search **Browser MCP Bridge** on [Mozilla Add-ons](https://addons.mozilla.org) and install it.
+Search **Browser MCP Bridge** on [Mozilla Add-ons](https://addons.mozilla.org/en-US/firefox/addon/ff-browser-mcp-bridge/) and install it.
 
 **3. Connect a tab**
 
